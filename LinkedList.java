@@ -27,7 +27,6 @@ class LinkedList
     public void insertEnd(String s, int n)
     {
         node temp = new node(s,n);
-
         if(start == null)
         {
             start = temp;
@@ -40,7 +39,6 @@ class LinkedList
                 trar = trar.link;
             }
             trar.link = temp;
-
         }
         count++;
     }
@@ -53,7 +51,7 @@ class LinkedList
             node temp = start.link;
             start = start.link;
             temp = null; // temporary variable trar is made so that any other node
-            // doesn't keeps pointing to first node.
+                         // doesn't keeps pointing to first node.
             count--;
         }
         else
@@ -67,7 +65,6 @@ class LinkedList
         if(start==null)
         {
             System.out.println("Underflow");
-
         }
         else if(start.link == null)
         {
