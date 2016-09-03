@@ -4,14 +4,12 @@
 
 public class node
 {
-    public String data1;
-    public int data2;
+    public String data;
     public node link;
     
-    public node(String d1, int d2)
+    public node(String d)
     {
-        this.data1 = d1;
-        this.data2 = d2;
+        this.data = d;
         link=null;
     }
 }

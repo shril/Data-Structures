@@ -13,11 +13,11 @@ class ClientLinkedList
         ob.insert("L",5);
         ob.printlist();*/
         
-        ob.insertEnd("S",1);
-        ob.insertEnd("H",2);
-        ob.insertEnd("R",3);
-        ob.insertEnd("I",4);
-        ob.insertEnd("L",5);
+        ob.insertEnd("S");
+        ob.insertEnd("H");
+        ob.insertEnd("R");
+        ob.insertEnd("I");
+        ob.insertEnd("L");
         // Printing the elements
         ob.printlist();
         
@@ -30,13 +30,13 @@ class ClientLinkedList
         ob.delete();
         ob.delete();
         
-        ob.insertEnd("S",1);
-        ob.insertEnd("H",2);
-        ob.insertEnd("R",3);
-        ob.insertEnd("I",4);
-        ob.insertEnd("L",5);
+        ob.insertEnd("S");
+        ob.insertEnd("H");
+        ob.insertEnd("R");
+        ob.insertEnd("I");
+        ob.insertEnd("L");
         
-        ob.counter();
+        System.out.println("Number of items in the list are : "+ob.counter());
         
         ob.deleteEnd();
         ob.deleteEnd();
@@ -45,13 +45,16 @@ class ClientLinkedList
         ob.deleteEnd();
         ob.deleteEnd();
         
-        ob.counter();
+        System.out.println("Number of items in the list are : "+ob.counter());
         
-        ob.insert("A",9);
-        ob.insert("N",5);
-        ob.insert("V",3);
+        ob.insert("A");
+        ob.insert("N");
+        ob.insert("V");
         ob.counter();
         ob.printlist();
+        
+        ob.deleteList();
+        System.out.println("Number of items in the list are : "+ob.counter());
     }
 }
         

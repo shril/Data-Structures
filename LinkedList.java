@@ -16,17 +16,17 @@ class LinkedList
         return start == null;
     }
 
-    public void insert(String s, int n)
+    public void insert(String s)
     {
-        node temp = new node(s,n);  // to initialize the data of the linked list
+        node temp = new node(s);  // to initialize the data of the linked list
         temp.link = start;
         start = temp;
         count++;
     }
 
-    public void insertEnd(String s, int n)
+    public void insertEnd(String s)
     {
-        node temp = new node(s,n);
+        node temp = new node(s);
         if(start == null)
         {
             start = temp;
@@ -47,7 +47,7 @@ class LinkedList
     {
         if(start!=null)
         {
-            System.out.println(start.data1+" : "+start.data2);
+            System.out.println(start.data);
             node temp = start.link;
             start = start.link;
             temp = null; // temporary variable trar is made so that any other node
@@ -68,7 +68,7 @@ class LinkedList
         }
         else if(start.link == null)
         {
-            System.out.println(start.data1+" : "+start.data2);
+            System.out.println(start.data);
             start = null;
             count--;
         }
@@ -82,7 +82,7 @@ class LinkedList
                 trar = trar.link;
             }
             temp.link = null;
-            System.out.println(trar.data1+" : "+trar.data2);
+            System.out.println(trar.data);
             count--;
         }
     } 
@@ -92,14 +92,20 @@ class LinkedList
         node temp = start;
         while(temp!=null)
         {
-            System.out.print(temp.data1+" : "+temp.data2+"     ");
+            System.out.print(temp.data+"   ");
             temp = temp.link;
         }
         System.out.println();
     }
 
-    public void counter()
+    public int counter()
     {
-        System.out.println("Number of items in the list are : "+this.count);
+        return this.count;
+    }
+    public void deleteList()
+    {
+        start = null;
+        count = 0;
+        System.out.println("List Suspended");
     }
 }
